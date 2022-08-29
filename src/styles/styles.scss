@@ -1,0 +1,500 @@
+// Variables
+$default-color: rgba(255, 255, 255, 0.719);
+$default-border-color: #000000;
+$default-background-color: #141314;
+$default-color-opaque: #14131498;
+// Reset
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.layoutContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.mainContent {
+  display: flex;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logInButton {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid $default-border-color 2px;
+  height: 42px;
+  align-items: center;
+}
+.logoutButton {
+  border: solid $default-border-color 1px;
+  align-self: center;
+  text-align: center;
+  padding: 6px;
+  width: 100%;
+  position: absolute;
+  left: 4rem;
+  width: min-content;
+  background: $default-color;
+  margin-left: 12px;
+}
+.logIObuttons {
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+.inbtw::after {
+  border: solid $default-border-color 1px;
+  content: "";
+  height: 50%;
+}
+#officialButton {
+  width: 50%;
+}
+#anonButton {
+  width: 50%;
+}
+// Chat styles
+.chatContainer {
+  width: 300px;
+  max-width: 300px;
+  background: $default-color;
+}
+.showHideChat {
+  display: flex;
+  flex-direction: column;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.showHideChatButton {
+  border: solid $default-border-color 1px;
+  align-self: center;
+  text-align: center;
+  padding: 6px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  width: min-content;
+  background: $default-color;
+  margin-left: 12px;
+}
+.showHideChatButtonAlt {
+  border: solid $default-border-color 1px;
+  text-align: center;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  margin-right: 12px;
+  background: none;
+}
+.showHideChatButtonAlt2 {
+  border: solid $default-border-color 1px;
+  text-align: center;
+  padding: 6px;
+}
+.chatWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.msgFeed {
+  padding: 8px;
+  overflow-y: scroll;
+  border-right: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  background: $default-color;
+  width: 300px;
+}
+#form {
+  background: $default-color;
+  position: relative;
+}
+.playlistForm {
+  position: relative;
+  display: flex;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+#sendButton {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  background: none;
+  border: none;
+  z-index: 99999;
+}
+#sendButton2 {
+  right: 1em;
+  background: none;
+  border: none;
+  z-index: 8999;
+  position: absolute;
+}
+textarea {
+  border-top: solid $default-border-color 2px;
+}
+.playlistContainer {
+  position: absolute;
+  bottom: 0;
+  // left: 0;
+  z-index: 9999;
+}
+.playlistOuter {
+  border-right: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  border-bottom: solid $default-border-color 2px;
+  display: flex;
+  position: absolute;
+  background: $default-color;
+  width: 8rem;
+  padding: 12px;
+  justify-content: space-between;
+  top: 0;
+  button {
+    border: none;
+    background: none;
+    padding: 4px;
+    text-align: start;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+.playlistInner {
+  flex-direction: column;
+  button {
+    border-bottom: solid black 1px;
+    width: 100%;
+  }
+}
+::-webkit-resizer {
+  display: none;
+}
+.writeMessages {
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  border-right: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  border-bottom: solid $default-border-color 2px;
+  display: flex;
+  flex-direction: column;
+  .sendMsgs {
+    max-width: 296px;
+    box-sizing: border-box;
+    display: block;
+    height: 43.5px;
+    max-height: 117.5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 4px;
+    position: relative;
+    width: 320px;
+    min-width: 296px;
+    height: 40px;
+    padding-right: 1em;
+  }
+}
+.chatMsgContainer {
+  margin: 8px;
+}
+.playerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+// Currently Playing
+.songInfoContainer {
+  background: $default-color-opaque;
+  height: 600px;
+  max-width: 900px;
+  width: 900px;
+  max-height: 600px;
+  border: solid $default-border-color 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentlyPlaying {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.searchWrapper {
+  position: absolute;
+  // bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: $default-color;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.logInNotif {
+  position: absolute;
+  z-index: 9999;
+  background-color: $default-color;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.songInfoExpand button {
+  position: absolute;
+  right: -2px;
+  bottom: calc(-2rem);
+  border-right: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  border-top: none;
+  border-bottom: solid $default-border-color 2px;
+  font-size: 1.4rem;
+  z-index: 99999;
+  background-color: $default-color-opaque;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.songInfoExpand button:hover {
+  cursor: pointer;
+}
+.songInfoExpMenu {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  gap: 10px;
+  button {
+    height: fit-content;
+    align-self: center;
+  }
+}
+.globalJoin,
+.choosePlaylist {
+  background: none;
+  padding: 4px;
+  border: solid $default-border-color 1px;
+}
+#songInput {
+  padding: 4px;
+  border: solid $default-border-color 1px;
+  padding-right: 4em;
+}
+// Logged in As
+.loggedInAs {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.6;
+}
+.liaDivOne {
+  text-decoration: underline;
+}
+
+.messagesContainer {
+  position: absolute;
+  bottom: 0;
+  right: 200px;
+  background: $default-color;
+  width: 400px;
+  height: 80px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  text-align: center;
+}
+.minimizeButtonContainer {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  border-bottom: solid $default-border-color 1px;
+  height: 51px;
+}
+.minimizeButtonContainerAlt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.minButton {
+  width: fit-content;
+  margin-right: 50px;
+  font-size: 1.4rem;
+}
+.actName {
+  font-size: 1.4rem;
+}
+.minButton:hover {
+  cursor: pointer;
+}
+.minimizedMessagesBox {
+  border-top: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  border-right: solid $default-border-color 2px;
+  font-size: 1.4rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expandedMessages {
+  position: absolute;
+  bottom: 0;
+  background: $default-color;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-top: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  border-right: solid $default-border-color 2px;
+}
+.messageFrom {
+  padding: 15px;
+  text-align: start;
+  border-bottom: solid $default-border-color 1px;
+}
+.listOfMessages {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 6px;
+}
+.chatMsg {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+.chatExpandedMessages {
+  position: absolute;
+  bottom: 0;
+  background: $default-color;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-top: solid $default-border-color 2px;
+  border-left: solid $default-border-color 2px;
+  border-right: solid $default-border-color 2px;
+}
+.activeMessages {
+  overflow-y: scroll;
+  max-height: 347px;
+}
+
+@media only screen and (max-width: 1269px) {
+  .songInfoContainer {
+    max-width: 50vw;
+  }
+  .currentlyPlaying {
+    max-width: 50vw;
+  }
+}
+@media only screen and (max-width: 966px) {
+  #songInput {
+    width: 175px;
+  }
+  .searchWrapper {
+    display: block;
+    padding-left: 4px;
+  }
+  .showHideChatButtonAlt {
+    padding-left: 4px;
+    margin-right: 4px;
+  }
+  .playlistForm {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .layoutContainer {
+    width: fit-content;
+  }
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+  .chatWrapper {
+    margin: 20px auto 0px auto;
+  }
+  .songInfoContainer {
+    display: flex;
+    margin: 0 auto;
+  }
+  .playerWrapper {
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 697px) {
+  .currentlyPlaying {
+    min-width: 300px;
+  }
+  #songInput {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 605px) {
+  .songInfoContainer {
+    max-width: 300px;
+  }
+}
