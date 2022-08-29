@@ -2,6 +2,7 @@
   "name": "music-with-friends",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Joey-Red.github.io/music-with-friends-front-end",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
@@ -27,6 +28,8 @@
     "youtube-music-api": "^1.0.6"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "music-with-friends-front-end -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "dotenv-webpack": "^8.0.1"
+    "dotenv-webpack": "^8.0.1",
+    "gh-pages": "^4.0.0"
   }
 }
