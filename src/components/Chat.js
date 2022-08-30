@@ -5,7 +5,9 @@ import { v4 as uuidv4 } from "uuid";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faCode } from "@fortawesome/free-solid-svg-icons";
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect(
+  "https://630dca02cbac8f22bf22fa1f--resplendent-dango-4e9308.netlify.app/"
+);
 
 function Chat(props) {
   let {
