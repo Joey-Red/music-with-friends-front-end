@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/music-with-friends-front-end/static/css/main.7089834b.css",
-    "main.js": "/music-with-friends-front-end/static/js/main.d6706178.js",
+    "main.js": "/music-with-friends-front-end/static/js/main.8cc5449b.js",
     "static/media/background.jpg": "/music-with-friends-front-end/static/media/background.5f88a82a098b47d36700.jpg",
     "index.html": "/music-with-friends-front-end/index.html",
     "main.7089834b.css.map": "/music-with-friends-front-end/static/css/main.7089834b.css.map",
-    "main.d6706178.js.map": "/music-with-friends-front-end/static/js/main.d6706178.js.map"
+    "main.8cc5449b.js.map": "/music-with-friends-front-end/static/js/main.8cc5449b.js.map"
   },
   "entrypoints": [
     "static/css/main.7089834b.css",
-    "static/js/main.d6706178.js"
+    "static/js/main.8cc5449b.js"
   ]
 }
