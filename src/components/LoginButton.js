@@ -1,19 +1,14 @@
 /* global gapi */
-import React, { useState, useEffect } from "react";
-import { useGoogleLogin } from "@react-oauth/google";
+import React, { useEffect } from "react";
 import { gapi } from "gapi-script";
-import Axios from "axios";
 import { googleLogout } from "@react-oauth/google";
 import { Helmet } from "react-helmet";
 function LoginButton(props) {
   let {
     isLoggedIn,
     setIsLoggedIn,
-    firstName,
     setFirstName,
-    email,
     setEmail,
-    userId,
     setUserId,
     anonMode,
     setAnonMode,

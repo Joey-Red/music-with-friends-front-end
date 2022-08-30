@@ -142,7 +142,7 @@ function CurrentlyPlaying(props) {
             setRplSrc(
               "https://www.youtube.com/embed/" +
                 response.result.items[0].id.videoId +
-                "?autoPlay=1&origin=https://Joey-Red.github.io/music-with-friends-front-end"
+                "?autoPlay=1&origin=https://joey-red.github.io/music-with-friends-front-end/"
             );
           },
           function (err) {
@@ -167,7 +167,7 @@ function CurrentlyPlaying(props) {
           setRplSrc(
             "https://www.youtube.com/embed/" +
               response.result.items[0].id.videoId +
-              "?autoPlay=1&origin=https://Joey-Red.github.io/"
+              "?autoPlay=1&origin=https://joey-red.github.io/music-with-friends-front-end/"
           );
         },
         function (err) {
