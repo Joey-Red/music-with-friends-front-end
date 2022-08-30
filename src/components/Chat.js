@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faCode } from "@fortawesome/free-solid-svg-icons";
-const socket = io.connect("https://resplendent-dango-4e9308.netlify.app");
+const socket = io.connect("https://music-with-friends-server.herokuapp.com/");
 
 function Chat(props) {
   let {
