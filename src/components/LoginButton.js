@@ -53,6 +53,10 @@ function LoginButton(props) {
           myUserEntity.Id = profile.getId();
           myUserEntity.Name = profile.getName();
           myUserEntity.Email = profile.getEmail();
+          setEmail(myUserEntity.Email);
+          setFirstName(myUserEntity.Name);
+          setUserId(myUserEntity.Id);
+          setIsLoggedIn(true);
           localStorage.setItem("myUserEntity", JSON.stringify(myUserEntity));
           setIsLoggedIn(true);
         },
